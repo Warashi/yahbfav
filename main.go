@@ -38,6 +38,7 @@ func main() {
 	}
 
 	router := httprouter.New()
+	router.Handler("GET", "/", http.FileServer(Assets))
 	router.GET("/:name", Favorite)
 
 	log.Fatal(http.ListenAndServe(":"+port, router))
