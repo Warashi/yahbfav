@@ -1,4 +1,4 @@
-package main
+package yahbfav
 
 import (
 	"encoding/xml"
